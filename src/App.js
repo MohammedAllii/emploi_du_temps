@@ -1,22 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 
+import DragNDrop from './components/DragNDrop';
+
+
+const data = [
+  {title: "Matiére", items: ['java','Android','ATM','Kotlin','SCRUM','NODE','REACT','SE','UI','Flutter']},
+  {title: "Lundi", items: []},
+  {title: "Mardi", items: []},
+  {title: "Mercredi", items: []},
+  {title: "Jeudi", items: []},
+  {title: "Vendredi", items: []},
+  {title: "Samedi", items: []}
+]
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <DragNDrop data={data}/>
       </header>
     </div>
   );
